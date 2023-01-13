@@ -3,15 +3,32 @@ version: "3.9"
 services:
 
   registry:
-    image: registry:2
     container_name: docker-registry
-#    hostname: registry
     restart: unless-stopped
+    image: registry:2
     environment:
-      REGISTRY_HTTP_TLS_CERTIFICATE: /ssl/kronshtadt.crt
-      REGISTRY_HTTP_TLS_KEY: /ssl/kronshtadt.key
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/kronshtadt.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/kronshtadt.key
     ports:
       - 5000:5000
     volumes:
-      - /srv/docker-regestry:/var/lib/registry
-      - /srv/docker-regestry/ssl:/certs
+      - docker-registry-data:/var/lib/registry
+      - ./certs:/certs
+
+volumes:
+  docker-registry-data: {}
+
+
+#  registry:
+#    image: registry:2
+#    container_name: docker-registry
+#    hostname: registry
+#    restart: unless-stopped
+#    environment:
+#      REGISTRY_HTTP_TLS_CERTIFICATE: /ssl/kronshtadt.crt
+#      REGISTRY_HTTP_TLS_KEY: /ssl/kronshtadt.key
+#    ports:
+#      - 5000:5000
+#    volumes:
+#      - /srv/docker-regestry:/var/lib/registry
+#      - /srv/docker-regestry/ssl:/certs
