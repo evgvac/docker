@@ -4,14 +4,14 @@ services:
     container_name: docker-registry
     restart: unless-stopped
     image: registry:2
-#    environment:
-#      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/kronshtadt.crt
-#      REGISTRY_HTTP_TLS_KEY: /certs/kronshtadt.key
+    environment:
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/kronshtadt.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/kronshtadt.key
     ports:
       - 5000:5000
     volumes:
       - /srv/docker-regestry/images:/var/lib/registry
-#      - ./certs:/certs
+      - ./certs:/certs
 
 #volumes:
 #  docker-registry-data: {}
