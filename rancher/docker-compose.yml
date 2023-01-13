@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  rancher:
+    image: rancher/rancher:latest
+    container_name: rancher
+    ports:
+      - "443:443"
+    restart: unless-stopped
+    volumes:
+      - "/opt/rancher:/var/lib/rancher"
+    privileged: true
+#    command: -e CATTLE_BOOTSTRAP_PASSWORD=admin
+
+volumes:
+  rancher-data:

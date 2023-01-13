@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  astra-repo:
+    image: nginx
+    container_name: repo_astra
+    ports:
+      - '80:80'
+    restart: unless-stopped
+    volumes:
+      - '/srv/repo-astra/default.conf:/etc/nginx/conf.d/default.conf'
+      - '/srv/repo-astra:/srv'
