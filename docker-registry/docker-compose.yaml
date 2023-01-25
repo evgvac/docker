@@ -10,5 +10,7 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - /srv/docker-regestry/images/docker/registry/v2:/var/lib/registry
+      - docker-registry:/var/lib/registry
       - ./certs:/certs
+volumes:
+  docker-registry: {}
