@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     image: registry:2
     environment:
-      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/kronshtadt.pem
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/kronshtadt.crt
       REGISTRY_HTTP_TLS_KEY: /certs/kronshtadt.key
     ports:
       - 5000:5000
