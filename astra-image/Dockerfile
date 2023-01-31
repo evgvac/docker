@@ -1,4 +1,4 @@
-FROM dcksv-linux-repo.kronshtadt.ru:5000/sogimi-astralinux-1.6:v1
+FROM sogimu/astralinux:1.6
 LABEL Сборка Astra Linux для Быданова Артёма
 COPY ./files/ ./etc/apt/
 ADD ./python/ ./home/user/
