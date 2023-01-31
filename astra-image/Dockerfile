@@ -2,7 +2,8 @@ FROM sogimu/astralinux:1.6
 LABEL Сборка Astra Linux для Быданова Артёма
 COPY ./files/ /etc/apt/
 RUN apt-get update && apt-get install -y \
-        qt5-default mono-dev squashfs-tools python \
+#        mono-dev \
+        qt5-default squashfs-tools python \
         cmake zip tar git subversion smbclient curl python-pip \
         java-common default-jre openjdk-8-jdk openjdk-8-jdk-headless \
         openjdk-8-jre openjdk-8-jre-headless default-libmysqlclient-dev \
