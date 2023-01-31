@@ -7,5 +7,5 @@ services:
       - '3142:3142'
     restart: unless-stopped
     volumes:
-      - '/srv/docker/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/'
+      - '/srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/'
     
