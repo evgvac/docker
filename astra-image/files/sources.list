@@ -1,30 +1,29 @@
 # Основной репозиторий (установочный диск)
-deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository smolensk main contrib non-free
+#deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository smolensk main contrib non-free
  
 # Актуальное оперативное обновление основного репозитория
-deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-update/ smolensk main contrib non-free
+#deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-update/ smolensk main contrib non-free
  
 # Диск со средствами разработки
-deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-dev/ smolensk main contrib non-free
+#deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-dev/ smolensk main contrib non-free
  
 # Актуальное оперативное обновление диска со средствами разработки
-deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-dev-update/ smolensk main contrib non-free
-
-
-# Основной репозиторий disk1
-#deb http://dcksv-linux-repo.int.kronshtadt.ru/disk1 smolensk main contrib non-free
-
-# Основной репозиторий disk2
-#deb http://dcksv-linux-repo.int.kronshtadt.ru/disk2 smolensk main contrib non-free
-
-# Драйвер nvidia
-#deb http://dcksv-linux-repo.int.kronshtadt.ru/nvidia smolensk non-free
-
-# Обновления
-#deb http://dcksv-linux-repo.int.kronshtadt.ru/updates smolensk main contrib non-free
-
-# Обновления dev
-#deb http://dcksv-linux-repo.int.kronshtadt.ru/updates_dev smolensk main contrib non-free
+#deb http://dl.astralinux.ru/astra/stable/1.6_x86-64/repository-dev-update/ smolensk main contrib non-free
 
 # Nexus-smolensk16
 #deb [arch=amd64 trusted=yes allow-insecure=yes] http://dcksv-linux-repo.int.kronshtadt.ru/d-6/vorsv-build-nexus/repository/apt-smolensk16 smolensk16 main
+
+# Основной репозиторий disk1
+deb http://dcksv-linux-repo.int.kronshtadt.ru/disk1 smolensk main contrib non-free
+
+# Основной репозиторий disk2
+deb http://dcksv-linux-repo.int.kronshtadt.ru/disk2 smolensk main contrib non-free
+
+# Драйвер nvidia
+deb http://dcksv-linux-repo.int.kronshtadt.ru/nvidia smolensk non-free
+
+# Обновления
+deb http://dcksv-linux-repo.int.kronshtadt.ru/updates smolensk main contrib non-free
+
+# Обновления dev
+deb http://dcksv-linux-repo.int.kronshtadt.ru/updates_dev smolensk main contrib non-free
