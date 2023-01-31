@@ -14,5 +14,5 @@ ADD ./mariadb/mariadb-1.1.5.post3.tar /home/user/
 WORKDIR /home/user/Python-3.10.2
 RUN ./configure --enable-optimizations
 RUN make altinstall
-RUN pip install mysqlclient && pip3.10 install mariadb
+#RUN pip install mysqlclient && pip3.10 install mariadb
 CMD ["/bin/bash"]
