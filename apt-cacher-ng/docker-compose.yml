@@ -1,11 +1,28 @@
-version: "3.9"
-services:
-  proxy-repo:
-    image: zhusj/apt-cacher-ng
-    container_name: repo-debian-ubuntu
-    ports:
-      - '3142:3142'
-    restart: unless-stopped
-    volumes:
-      - '/srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/'
+#version: "3.9"
+#services:
+#  proxy-repo:
+#    image: zhusj/apt-cacher-ng
+#    container_name: repo-debian-ubuntu
+#    ports:
+#      - '3142:3142'
+#    restart: unless-stopped
+#    volumes:
+#      - /srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/
     
+
+---
+version: '3'
+
+services:
+  apt-cacher-ng:
+    image: sameersbn/apt-cacher-ng
+    container_name: apt-cacher-ng
+    ports:
+      - "3142:3142"
+    volumes:
+      - apt-cacher-ng:/var/cache/apt-cacher-ng
+      - /srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/
+    restart: unless-stopped
+
+volumes:
+  apt-cacher-ng:
