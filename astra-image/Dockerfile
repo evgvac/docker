@@ -10,6 +10,6 @@ ADD ./python/ ./home/user/
 #        openjdk-8-jre openjdk-8-jre-headless default-libmysqlclient-dev \
 #        && rm -rf /var/lib/apt/lists/*
 WORKDIR /home/user/Python-3.10.2
-RUN ./configure --enable-optimizations
-RUN make altinstall
+#RUN ./configure --enable-optimizations
+#RUN make altinstall
 CMD ["/bin/bash"]
