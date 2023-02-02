@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
         cmake zip tar git subversion smbclient curl python-pip \
         java-common default-jre openjdk-8-jdk openjdk-8-jdk-headless \
         openjdk-8-jre openjdk-8-jre-headless default-libmysqlclient-dev \
-        openssl libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.6 libgdm-dev libdb4o-cil-dev libpcap-dev \
+        openssl libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.6 libpcap-dev \
         && rm -rf /var/lib/apt/lists/*
 ADD ./python/Python-3.10.2.tgz /home/user/ 
 ADD ./mariadb/mariadb-1.1.5.post3.tar /home/user/
