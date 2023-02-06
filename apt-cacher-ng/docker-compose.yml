@@ -3,8 +3,8 @@ version: '3'
 
 services:
   apt-cacher-ng:
-    image: sameersbn/apt-cacher-ng
-#    image: zhusj/apt-cacher-ng
+#    image: sameersbn/apt-cacher-ng
+    image: zhusj/apt-cacher-ng
     container_name: apt-cacher-ng
     ports:
       - "3142:3142"
