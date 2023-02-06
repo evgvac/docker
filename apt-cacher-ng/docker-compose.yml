@@ -3,7 +3,7 @@ version: '3'
 
 services:
   apt-cacher-ng:
-    image: konstruktoid/apt-cacher-ng:master
+    image: mollien/apt-cacher-ng
 #    image: sameersbn/apt-cacher-ng
 #    image: zhusj/apt-cacher-ng
     container_name: apt-cacher-ng
