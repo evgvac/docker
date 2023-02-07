@@ -14,6 +14,5 @@ services:
       - apt-cacher-ng:/var/cache/apt-cacher-ng
       - /srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/
     
-
 volumes:
   apt-cacher-ng:
