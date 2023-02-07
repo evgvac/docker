@@ -4,8 +4,8 @@ version: '3'
 services:
   apt-cacher-ng:
 #    image: mollien/apt-cacher-ng
-#    image: sameersbn/apt-cacher-ng
-    image: zhusj/apt-cacher-ng:202210191826
+    image: docker pull sameersbn/apt-cacher-ng:3.7.4-20220421
+#    image: zhusj/apt-cacher-ng:202210191826
     container_name: apt-cacher-ng
     restart: unless-stopped
     ports:
