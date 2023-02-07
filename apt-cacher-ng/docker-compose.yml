@@ -11,9 +11,9 @@ services:
     ports:
       - "3142:3142"
     volumes:
-#      - apt-cacher-ng:/var/cache/apt-cacher-ng
+      - apt-cacher-ng:/var/cache/apt-cacher-ng
       - /srv/apt-cacher-ng/sources.list.d:/etc/apt/sources.list.d/
     
 
-#volumes:
-#  apt-cacher-ng:
+volumes:
+  apt-cacher-ng:
